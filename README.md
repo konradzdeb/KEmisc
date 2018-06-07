@@ -2,11 +2,17 @@
 Kmisc
 =====
 
-The goal of Kmisc is to …
+Kmisc provides a disorganised collection of small convenience and
+utility functions.
 
 Installation
 ------------
 
 ``` r
-## basic example code
+if (!require("devtools")) {
+    install.packages("devtools")
+    devtools::install_github('konradedgar/Kmisc')
+} else {
+    devtools::install_github('konradedgar/Kmisc')
+}
 ```
