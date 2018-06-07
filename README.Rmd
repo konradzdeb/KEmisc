@@ -18,10 +18,8 @@ knitr::opts_chunk$set(
 
 The goal of Kmisc is to ...
 
-## Example
+## Installation
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r pkg_install, eval=FALSE, echo=TRUE}
 ## basic example code
 ```
