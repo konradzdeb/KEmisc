@@ -1,3 +1,6 @@
+# Ignore R production files
 .Rproj.user
 .Rhistory
 .RData
+# Ignore session log
+sessionInfoLog
