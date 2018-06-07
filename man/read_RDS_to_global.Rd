@@ -7,14 +7,23 @@
 read_RDS_to_global(file_path, verbose = TRUE)
 }
 \arguments{
-\item{verbose}{A logica, if \code{TRUE}}
+\item{file_path}{Path to the RDS file.}
+
+\item{verbose}{A logica, if \code{TRUE} prints a short message with name of
+created object.}
 }
 \value{
 A R object corresponding to \code{basename} on \code{file_path}
   argument.
 }
 \description{
-
+The function provides conveniance mechanism for creating R
+  objects corresponding to names of RDS files.
+}
+\details{
+For instance, when executing
+  \code{saved_data <- readRDS("file_path_to/saved_data.RDS")} we may do
+  \code{read_RDS_to_global("file_path_to/saved_data.RDS")}.
 }
 \examples{
 \dontrun{

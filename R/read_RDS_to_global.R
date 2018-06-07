@@ -1,12 +1,21 @@
 #' @title Read RDS Ffile Directly to Global Environment
 #'
-#' @description
+#' @description The function provides conveniance mechanism for creating R
+#'   objects corresponding to names of RDS files.
 #'
-#' @param file_path
-#' @param verbose A logica, if \code{TRUE}
+#' @details For instance, when executing
+#'   \code{saved_data <- readRDS("file_path_to/saved_data.RDS")} we may do
+#'   \code{read_RDS_to_global("file_path_to/saved_data.RDS")}.
+#'
+#' @param file_path Path to the RDS file.
+#'
+#' @param verbose A logica, if \code{TRUE} prints a short message with name of
+#'   created object.
 #'
 #' @return A R object corresponding to \code{basename} on \code{file_path}
 #'   argument.
+#'
+#' @importFrom checkmate allMissing
 #'
 #' @export
 #'
