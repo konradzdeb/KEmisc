@@ -16,12 +16,15 @@ knitr::opts_chunk$set(
 
 # Kmisc
 
-The goal of Kmisc is to ...
+Kmisc provides a disorganised collection of small convenience and utility functions. 
 
-## Example
+## Installation
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
+```{r pkg_install, eval=FALSE, echo=TRUE}
+if (!require("devtools")) {
+    install.packages("devtools")
+    devtools::install_github('konradedgar/Kmisc')
+} else {
+    devtools::install_github('konradedgar/Kmisc')
+}
 ```
