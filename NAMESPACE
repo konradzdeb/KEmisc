@@ -2,3 +2,4 @@
 
 export(read_RDS_to_global)
 importFrom(checkmate,allMissing)
+importFrom(checkmate,assert_access)
