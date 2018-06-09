@@ -1,8 +1,9 @@
 Package: Kmisc
-Title: Collection of Random Conveniance and Utility Function
+Title: Collection of Random Convenience and Utility Function
 Version: 0.0.1
 Authors@R: "Konrad Zdeb <konrad.zdeb@me.com> [aut,cre]"
-Description: What the package does (one paragraph).
+Description: The package provides disorganised collection of random convenience 
+  and utility functions.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
