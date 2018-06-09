@@ -22,13 +22,12 @@
 #'
 #' @examples
 #' \dontrun{
-#'   tmpCars <- tempfile(pattern = "mtcars_", fileext = ".RDS")
+#'   tmpCars <- tempfile(pattern = "mtcars_temp_RDS_", fileext = ".RDS")
 #'   saveRDS(object = mtcars, file = tmpCars)
 #'   read_RDS_to_global(tmpCars)
 #' }
 #'
 read_RDS_to_global <- function(file_path, verbose = TRUE) {
-
     # Check if path is accessible
     checkmate::assert_access(x = file_path, access = "r")
 
@@ -41,11 +40,12 @@ read_RDS_to_global <- function(file_path, verbose = TRUE) {
     if (verbose) {
         msg <- paste("Created object:",
                      base_name,
-                     "in global environment.", collapse = " ")
+                     "in global environment.",
+                     collapse = " ")
         if (checkmate::allMissing(setdiff(base_name, ls(envir = globalenv())))) {
-            cat(msg)
+            message(msg, appendLF = TRUE)
         } else {
-            cat(msg)
+            message(msg, appendLF = TRUE)
         }
     }
 }

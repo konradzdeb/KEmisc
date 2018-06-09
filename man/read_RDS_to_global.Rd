@@ -27,7 +27,7 @@ For instance, when executing
 }
 \examples{
 \dontrun{
-  tmpCars <- tempfile(pattern = "mtcars_", fileext = ".RDS")
+  tmpCars <- tempfile(pattern = "mtcars_temp_RDS_", fileext = ".RDS")
   saveRDS(object = mtcars, file = tmpCars)
   read_RDS_to_global(tmpCars)
 }
