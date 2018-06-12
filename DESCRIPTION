@@ -5,9 +5,10 @@ Authors@R: "Konrad Zdeb <konrad.zdeb@me.com> [aut,cre]"
 Description: The package provides disorganised collection of random convenience 
   and utility functions.
 Depends: R (>= 3.5.0)
+Imports: checkmate,
+         scales (>= 0.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat
 RoxygenNote: 6.0.1
-Imports: checkmate
