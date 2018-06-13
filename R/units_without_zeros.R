@@ -1,5 +1,9 @@
 #' @title Produce Formatted Unit Without Zero
 #'
+#' @description Conveniance wrapper on useful \code{\link[scales]{unit_format}}
+#'   function offered within \code{scales} package. Useful when producing scales
+#'   without 0: \code{"" "1K" "10K"} instead of \code{"0k" "1K" "10K"}.
+#'
 #' @param x A numeric vector
 #' @param ... other arguments passed to \code{\link[scales]{unit_format}}
 #'
