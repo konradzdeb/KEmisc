@@ -21,7 +21,7 @@ units_without_zero <- function(x, ...) {
         if (is.na(lbl)) {
             NA
         } else if (lbl == 0) {
-            "0"
+            ""
         } else {
             sf(x = lbl)
         }
