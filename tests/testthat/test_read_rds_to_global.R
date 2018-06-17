@@ -1,4 +1,4 @@
-context("Test read_RDS_to_global")
+context("Importing RDS files via read_RDS_to_global")
 
 test_that(desc = "Object is created in global environment",
           code = expect_true(object = {

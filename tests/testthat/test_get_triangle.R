@@ -1,4 +1,4 @@
-context("Test getting matrix upper or lower part")
+context("Getting matrix upper or lower part")
 
 test_that(desc = "Returned object is a matrix",
           code = expect_is(
