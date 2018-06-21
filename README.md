@@ -3,7 +3,9 @@ Kmisc
 =====
 
 Kmisc provides a disorganised collection of small convenience and
-utility functions.
+utility functions. I mostly use this package as remote storage for
+functions that I want to have available across different environments.
+It’s rather unlikely that anyone will find it useful.
 
 Installation
 ------------
