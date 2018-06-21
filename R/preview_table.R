@@ -21,7 +21,7 @@ preview_table <- function(x, Show = TRUE) {
     merge(x = as.data.frame(tbl),
           y = as.data.frame(prop_tbl),
           by = "x") -> res
-    setNames(object = res,
+    stats::setNames(object = res,
              nm = c(nm_x, "no_obs", "frac")) -> res
 
     if (Show) {
