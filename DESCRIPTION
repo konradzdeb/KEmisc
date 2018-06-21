@@ -1,6 +1,6 @@
 Package: Kmisc
 Title: Collection of Random Convenience and Utility Function
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: "Konrad Zdeb <konrad.zdeb@me.com> [aut,cre]"
 Description: The package provides disorganised collection of random convenience 
   and utility functions.
