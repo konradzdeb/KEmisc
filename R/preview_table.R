@@ -25,7 +25,7 @@ preview_table <- function(x, Show = TRUE) {
              nm = c(nm_x, "no_obs", "frac")) -> res
 
     if (Show) {
-        View(res)
+        View(x = res, title = paste("Table:", nm_x))
     }
 
     return(res)
