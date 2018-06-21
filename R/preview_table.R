@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' preview_table(x = c(rep(1, 10), rep(5, 2)))
+#' preview_table(x = mtcars$am, Show = FALSE)
 preview_table <- function(x, Show = TRUE) {
     nm_x <- deparse(substitute(x))
     tbl <- table(x)

@@ -21,5 +21,5 @@ The function constructs a data frame from \code{\link[base]{table}}
   function for easier preview.
 }
 \examples{
-preview_table(x = c(rep(1, 10), rep(5, 2)))
+preview_table(x = mtcars$am, Show = FALSE)
 }
