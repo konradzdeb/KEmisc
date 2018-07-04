@@ -1,3 +1,7 @@
+# KEmisc 0.0.3
+
+* Changed package name to KEmisc
+
 # Kmisc 0.0.2
 
 * Added `preview_table` function

@@ -1,4 +1,4 @@
-Package: Kmisc
+Package: KEmisc
 Title: Collection of Random Convenience and Utility Function
 Version: 0.0.2
 Authors@R: "Konrad Zdeb <konrad.zdeb@me.com> [aut,cre]"

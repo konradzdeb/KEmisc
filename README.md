@@ -1,8 +1,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Kmisc
-=====
+KEmisc
+======
 
-Kmisc provides a disorganised collection of small convenience and
+KEmisc provides a disorganised collection of small convenience and
 utility functions. I mostly use this package as remote storage for
 functions that I want to have available. It’s rather unlikely that
 anyone will find it useful.
