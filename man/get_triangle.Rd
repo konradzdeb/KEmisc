@@ -16,6 +16,10 @@ get_triangle(cormat, part = "upper")
 Object of dimensions \code{dim(cormat)} with \code{NA} values being
   present in lower or upper triangle.
 }
+\description{
+A simple function returning upper or lower matrix triangle.
+  Remaining triangle is replaced with NAs.
+}
 \details{
 The functions as a wrapper on \code{\link[base]{lower.tri}} and
   \code{\link[base]{upper.tri}} functions.

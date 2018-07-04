@@ -1,4 +1,4 @@
 library(testthat)
-library(Kmisc)
+library(KEmisc)
 
-test_check("Kmisc")
+test_check("KEmisc")

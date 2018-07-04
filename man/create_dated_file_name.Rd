@@ -20,3 +20,6 @@ A character vector of length corresponding to x.
 This is trival function that wraps \code{\link[base]{paste}}
   call and prduces a string with \code{\link[base]{Sys.time}} results.
 }
+\examples{
+create_dated_file_name(x = "file_name")
+}

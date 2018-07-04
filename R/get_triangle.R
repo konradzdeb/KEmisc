@@ -1,5 +1,8 @@
 #' @title Get Lower or Upper Triangle of Correlations Matrix
 #'
+#' @description A simple function returning upper or lower matrix triangle.
+#'   Remaining triangle is replaced with NAs.
+#'
 #' @param cormat Usually correlation matrix
 #' @param part Single string vector decide whether to return \code{upper} or
 #'   \code{lower} part.

@@ -12,6 +12,7 @@
 #' @export
 #'
 #' @examples
+#' create_dated_file_name(x = "file_name")
 create_dated_file_name <- function(x,
                                    timestamp_format = "%d-%m-%Y",
                                    sep = "-") {
