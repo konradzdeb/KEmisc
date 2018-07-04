@@ -1,7 +1,7 @@
 #' @title Create Dated File/Path Name
 #'
 #' @description This is trival function that wraps \code{\link[base]{paste}}
-#'   call and prduces a string with \code{\link[base]Sys.time} results.
+#'   call and prduces a string with \code{\link[base]{Sys.time}} results.
 #'
 #' @param x A character vector.
 #' @param timestamp_format A string scalar.

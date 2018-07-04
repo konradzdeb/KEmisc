@@ -15,9 +15,6 @@
 #' @return A R object corresponding to \code{basename} on \code{file_path}
 #'   argument.
 #'
-#' @importFrom checkmate allMissing
-#' @importFrom checkmate assert_access
-#'
 #' @export
 #'
 #' @examples
