@@ -13,8 +13,8 @@ Installation
 ``` r
 if (!require("devtools")) {
     install.packages("devtools")
-    devtools::install_github('konradedgar/Kmisc')
+    devtools::install_github('konradedgar/KEmisc')
 } else {
-    devtools::install_github('konradedgar/Kmisc')
+    devtools::install_github('konradedgar/KEmisc')
 }
 ```
