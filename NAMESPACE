@@ -2,6 +2,7 @@
 
 export(create_dated_file_name)
 export(get_triangle)
+export(pretty_cuts)
 export(preview_frequency_table)
 export(preview_table)
 export(read_RDS_to_global)
