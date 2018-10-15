@@ -1,11 +1,10 @@
 #' @title Kmisc: colleaction of misceallous functions
 #'
-#' @description Kmisc provides a disorganised collection of convenience and 
+#' @description Kmisc provides a disorganised collection of convenience and
 #'   utility functions.
 #'
-#' @details The package was developed out of need to keep random handy functions, 
+#' @details The package was developed out of need to keep random handy functions,
 #'  which don't appear to belong anywhere in one place.
 #'
-#' @docType package
-#' @name Kmisc
-NULL
+#' @importFrom asserthat assert_character
+"_PACKAGE"

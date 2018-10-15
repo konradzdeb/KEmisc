@@ -28,7 +28,7 @@
 #'
 pretty_cuts <- function(cut_str, only_cuts = FALSE) {
     # Check if passed as factor and de-factorize if needed
-    is.factor(cut_str) {
+    if (is.factor(cut_str)) {
         cut_str <- as.character(cut_str)
     }
 
@@ -37,9 +37,8 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
     checkmate::assert_character(
         x = cut_str,
         min.chars = 3,
-        pattern = "*.\\d*.*\\d*",
+        pattern = ".*(\\d*).*\\,.*(\\d*).*",
         ignore.case = TRUE,
-        fixed = FALSE,
         any.missing = TRUE,
         all.missing = FALSE,
         min.len = 1,
