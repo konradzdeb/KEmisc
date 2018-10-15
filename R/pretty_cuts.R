@@ -20,10 +20,30 @@
 #' @return A character vector.
 #' @export
 #'
+#' @
+#'
 #' @examples
 #' set.seed(123)
 #' pretty_cuts(cut(x = runif(n = 1e3, min = 1, 1e4), breaks = 5))
 #'
 pretty_cuts <- function(cut_str, only_cuts = FALSE) {
+    # Check if passed as factor and de-factorize if needed
+    is.factor(cut_str) {
+        cut_str <- as.character(cut_str)
+    }
 
+    # Check if passed vector is character vector and has the required
+    # charactiertics
+    checkmate::assert_character(
+        x = cut_str,
+        min.chars = 3,
+        pattern = "*.\\d*.*\\d*",
+        ignore.case = TRUE,
+        fixed = FALSE,
+        any.missing = TRUE,
+        all.missing = FALSE,
+        min.len = 1,
+        unique = FALSE,
+        null.ok = FALSE
+    )
 }
