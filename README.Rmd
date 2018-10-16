@@ -23,8 +23,8 @@ KEmisc provides a disorganised collection of small convenience and utility funct
 ```{r pkg_install, eval=FALSE, echo=TRUE}
 if (!require("devtools")) {
     install.packages("devtools")
-    devtools::install_github('konradedgar/Kmisc')
+    devtools::install_github('konradedgar/KEmisc')
 } else {
-    devtools::install_github('konradedgar/Kmisc')
+    devtools::install_github('konradedgar/KEmisc')
 }
 ```

@@ -17,10 +17,13 @@
 #'   function will return only cut boundaries. For \code{FALSE} the function
 #'   replaces each value with modified set value.
 #'
+#' @importFrom as
+#'
 #' @return A character vector.
 #' @export
 #'
-#' @
+#' @importFrom stringi str_extract
+#' @importFrom checkmate assert_that
 #'
 #' @examples
 #' set.seed(123)
@@ -34,7 +37,7 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
 
     # Check if passed vector is character vector and has the required
     # charactiertics
-    checkmate::assert_character(
+    assert_character(
         x = cut_str,
         min.chars = 3,
         pattern = ".*(\\d*).*\\,.*(\\d*).*",
@@ -45,4 +48,23 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
         unique = FALSE,
         null.ok = FALSE
     )
+
+    # Split on comma to get two parts of each string
+    lst_chunks <- strsplit(x = cut_str,
+                           split = ",",
+                           fixed = TRUE)
+
+    lapply(
+        X = lst_chunks,
+        FUN = function(chunk_group) {
+            sapply(chunk_group, function(chunk) {
+                clean_num <- as.integer(stri_extract(str = chunk, regex = "\\d{1,}"))
+                if (grepl(pattern = "\\[|\\]", x = chunk)) {
+                    clean_num - 1
+                }
+                clean_num
+            })
+        }
+    )
+
 }
