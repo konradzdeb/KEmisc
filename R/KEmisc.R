@@ -6,5 +6,4 @@
 #' @details The package was developed out of need to keep random handy functions,
 #'  which don't appear to belong anywhere in one place.
 #'
-#' @importFrom asserthat assert_character
 "_PACKAGE"

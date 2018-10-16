@@ -17,13 +17,11 @@
 #'   function will return only cut boundaries. For \code{FALSE} the function
 #'   replaces each value with modified set value.
 #'
-#' @importFrom as
-#'
 #' @return A character vector.
 #' @export
 #'
-#' @importFrom stringi str_extract
-#' @importFrom checkmate assert_that
+#' @importFrom stringr str_extract
+#' @importFrom checkmate assert_character
 #'
 #' @examples
 #' set.seed(123)
@@ -58,7 +56,7 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
         X = lst_chunks,
         FUN = function(chunk_group) {
             sapply(chunk_group, function(chunk) {
-                clean_num <- as.integer(stri_extract(str = chunk, regex = "\\d{1,}"))
+                clean_num <- as.integer(str_extract(str = chunk, regex = "\\d{1,}"))
                 if (grepl(pattern = "\\[|\\]", x = chunk)) {
                     clean_num - 1
                 }
