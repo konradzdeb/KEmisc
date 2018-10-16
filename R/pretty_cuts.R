@@ -68,7 +68,7 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
         FUN = function(chunk_group) {
             sapply(chunk_group, function(chunk) {
                 clean_num <-
-                    as.integer(str_extract(str = chunk, pattern = "\\d{1,}"))
+                    as.integer(str_extract(string = chunk, pattern = "\\d{1,}"))
                 if (grepl(pattern = "\\(|\\)", x = chunk)) {
                     clean_num - 1
                 } else {
