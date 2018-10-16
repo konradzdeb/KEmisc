@@ -18,3 +18,8 @@ if (!require("devtools")) {
     devtools::install_github('konradedgar/KEmisc')
 }
 ```
+
+------------------------------------------------------------------------
+
+[![Build
+Status](https://travis-ci.org/%7Bkonradedgar%7D/%7BKEmisc%7D.png?branch=master)](https://travis-ci.org/%7Bkonradedgar%7D/%7BKEmisc%7D)

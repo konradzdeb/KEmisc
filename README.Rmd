@@ -28,3 +28,7 @@ if (!require("devtools")) {
     devtools::install_github('konradedgar/KEmisc')
 }
 ```
+
+---
+
+[![Build Status](https://travis-ci.org/{konradedgar}/{KEmisc}.png?branch=master)](https://travis-ci.org/{konradedgar}/{KEmisc})
