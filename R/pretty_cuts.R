@@ -20,7 +20,7 @@
 #' @return A character vector.
 #' @export
 #'
-#' @importFrom stringr str_extract
+#' @importFrom stringr str_extract str_replace str_squish
 #' @importFrom checkmate assert_character
 #'
 #' @examples
@@ -52,6 +52,7 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
                            split = ",",
                            fixed = TRUE)
 
+    # Fix boundary numbers
     lapply(
         X = lst_chunks,
         FUN = function(chunk_group) {
@@ -60,10 +61,33 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
                     as.integer(str_extract(str = chunk, pattern = "\\d{1,}"))
                 if (grepl(pattern = "\\(|\\)", x = chunk)) {
                     clean_num - 1
+                } else {
+                    clean_num
                 }
-                clean_num
             })
         }
-    )
+    ) -> lst_chunks_fxd
 
+    # Collpse each chunk to greate a nice group with - in the middle
+    lapply(
+        X = lst_chunks_fxd,
+        FUN = function(chunk) {
+            # Clear white spaces from the chunk side
+            trimws(chunk) -> chunk
+            # Remove potential superflous white spaces inside string
+            chunk <- str_squish(chunk)
+            # Collapse with a nice hyphen notation
+            paste0(chunk, collapse = " - ")
+        }
+    ) -> lst_chunks_replaced
+
+    #  Prepare vector to return
+    res <- unlist(lst_chunks_replaced)
+
+    # Check whether to return only cuts
+    if (only_cuts) {
+        return(unique(res))
+    } else {
+        return(res)
+    }
 }
