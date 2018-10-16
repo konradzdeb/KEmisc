@@ -13,11 +13,21 @@
 #'   or by \code{\link[Hmisc]{cut2}} or a similar function. The set values have
 #'   to be expressed as integer strings.
 #'
-#' @param only_cuts A logical, defults to \code{FALSE}. If \code{TRUE} the
+#' @param only_cuts A logical, defaults to \code{FALSE}. If \code{TRUE} the
 #'   function will return only cut boundaries. For \code{FALSE} the function
 #'   replaces each value with modified set value.
 #'
 #' @return A character vector.
+#'
+#' @section Acknowledgements:
+#' The following function was referenced on Stacks Overflow on a number of
+#'   occasions, in reference to
+#'   \href{https://stackoverflow.com/q/31771810/1655567}{obtaining nicer cuts},
+#'   \href{https://stackoverflow.com/q/34812228/1655567}{improving function performance} and
+#'   \href{https://stackoverflow.com/q/34589927/1655567}{reducing small groups}.
+#'   The linked discussion provide a more comprehensive solutions than the function
+#'   offered in this package.
+#'
 #' @export
 #'
 #' @importFrom stringr str_extract str_replace str_squish
@@ -34,7 +44,7 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
     }
 
     # Check if passed vector is character vector and has the required
-    # charactiertics
+    # characteristics
     assert_character(
         x = cut_str,
         min.chars = 3,
@@ -68,13 +78,13 @@ pretty_cuts <- function(cut_str, only_cuts = FALSE) {
         }
     ) -> lst_chunks_fxd
 
-    # Collpse each chunk to greate a nice group with - in the middle
+    # Collapse each chunk to create a nice group with - in the middle
     lapply(
         X = lst_chunks_fxd,
         FUN = function(chunk) {
             # Clear white spaces from the chunk side
             trimws(chunk) -> chunk
-            # Remove potential superflous white spaces inside string
+            # Remove potential superfluous white spaces inside string
             chunk <- str_squish(chunk)
             # Collapse with a nice hyphen notation
             paste0(chunk, collapse = " - ")
