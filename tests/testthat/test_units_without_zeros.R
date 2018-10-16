@@ -8,5 +8,5 @@ test_that(desc = "Correct vector is generated.",
                   unit = "K",
                   sep = ""
               ),
-              expected = c("", "1K", "1,000K")
+              expected = c("", "1K", "1 000K")
           ))
