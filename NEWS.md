@@ -1,3 +1,8 @@
+# KEmisc 0.0.4
+
+* Added `pretty_cuts` function
+* Added Travis integration
+
 # KEmisc 0.0.3
 
 * Changed package name to KEmisc

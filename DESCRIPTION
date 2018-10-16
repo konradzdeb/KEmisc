@@ -1,6 +1,6 @@
 Package: KEmisc
 Title: Collection of Random Convenience and Utility Function
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: person("Konrad", "Zdeb", email = "konrad.zdeb@me.com", role = c("aut", "cre"))
 Description: The package provides disorganised collection of random convenience 
   and utility functions.
