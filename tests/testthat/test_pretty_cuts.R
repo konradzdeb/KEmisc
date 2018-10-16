@@ -1,6 +1,6 @@
 context("Test formatting cut2 output")
 
-test_that(desc = "Provided string correctly changes set nottion",
+test_that(desc = "Provided string correctly changes set notation",
           code = expect_identical(
               object = pretty_cuts(cut_str = Hmisc::cut2(1:6505, g = 5),
                                    only_cuts = TRUE),
