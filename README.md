@@ -3,7 +3,7 @@ KEmisc
 ======
 
 [![Travis build
-status](https://travis-ci.org/konradedgar/Kmisc.svg?branch=master)](https://travis-ci.org/konradedgar/Kmisc)
+status](https://travis-ci.org/konradedgar/KEmisc.svg?branch=master)](https://travis-ci.org/konradedgar/KEmisc)
 
 KEmisc provides a disorganised collection of small convenience and
 utility functions. I mostly use this package as remote storage for
