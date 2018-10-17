@@ -6,7 +6,17 @@ if (requireNamespace("Hmisc", quietly = TRUE)) {
     test_that(desc = "Provided string correctly changes set notation",
               code = expect_identical(
                   object = pretty_cuts(
-                      cut_str = Hmisc::cut2(1:6505, g = 5),
+                      cut_str = structure(
+                          1:5,
+                          .Label = c(
+                              "[   1,1302)",
+                              "[1302,2603)",
+                              "[2603,3904)",
+                              "[3904,5205)",
+                              "[5205,6505]"
+                          ),
+                          class = "factor"
+                      ),
                       only_cuts = TRUE
                   ),
                   expected = c(
