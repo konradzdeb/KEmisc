@@ -2,7 +2,7 @@
 #'
 #' @description The function provides bare file name without path and extension.
 #'
-#' @param x A file path
+#' @param x A character vector with a file path
 #'
 #' @return A character vector corresponding to file name without path and
 #'   extension.
