@@ -2,7 +2,7 @@
 #'
 #' @description The function provides bare file name without path and extension.
 #'
-#' @param x A character vector with a file path
+#' @param x A character vector with a file path(s)
 #'
 #' @return A character vector corresponding to file name without path and
 #'   extension.
@@ -11,6 +11,7 @@
 #'
 #' @examples
 #' bare_file_name(tempfile(pattern = "some_file", fileext = ".ext"))
+#'
 bare_file_name <- function(x) {
     basename(path = tools::file_path_sans_ext(x))
 }

@@ -7,7 +7,7 @@
 bare_file_name(x)
 }
 \arguments{
-\item{x}{A character vector with a file path}
+\item{x}{A character vector with a file path(s)}
 }
 \value{
 A character vector corresponding to file name without path and
@@ -18,4 +18,5 @@ The function provides bare file name without path and extension.
 }
 \examples{
 bare_file_name(tempfile(pattern = "some_file", fileext = ".ext"))
+
 }
