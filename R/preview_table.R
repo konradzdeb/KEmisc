@@ -10,10 +10,14 @@
 #'
 #' @return A data frame.
 #'
+#' @importFrom utils View
+#'
 #' @export
 #'
 #' @examples
-#' preview_table(x = mtcars$am, Show = FALSE)
+#' \dontrun{
+#'   preview_table(x = mtcars$am, Show = FALSE)
+#' }
 preview_table <- function(x, Show = TRUE) {
     nm_x <- deparse(substitute(x))
     tbl <- table(x)

@@ -21,5 +21,7 @@ The function constructs a data frame from \code{\link[base]{table}}
   function for easier preview.
 }
 \examples{
-preview_table(x = mtcars$am, Show = FALSE)
+\dontrun{
+  preview_table(x = mtcars$am, Show = FALSE)
+}
 }
