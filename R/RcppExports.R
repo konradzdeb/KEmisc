@@ -11,9 +11,7 @@
 #' @return A scalar string with class name.
 #'
 #' @export
-NULL
-
 guess_vector_type <- function(x) {
-    .Call('_KEmisc_guess_vector_type', PACKAGE = 'KEmisc', x)
+    .Call(`_KEmisc_guess_vector_type`, x)
 }
 

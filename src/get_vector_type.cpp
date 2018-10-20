@@ -11,8 +11,8 @@ using namespace Rcpp;
 //' @return A scalar string with class name.
 //'
 //' @export
-
 // [[Rcpp::export]]
-NumericVector guess_vector_type(NumericVector x) {
-  return x * 2;
+Rcpp::String guess_vector_type(Rcpp::RObject x) {
+    Rcpp::String res = "a";
+    return res;
 }
