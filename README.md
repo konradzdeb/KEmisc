@@ -16,10 +16,10 @@ Installation
 ------------
 
 ``` r
-if (!require("devtools")) {
-    install.packages("devtools")
+if (requireNamespace("devtools", quietly = TRUE)) {
     devtools::install_github('konradedgar/KEmisc')
 } else {
+    install.packages("devtools")
     devtools::install_github('konradedgar/KEmisc')
 }
 ```
