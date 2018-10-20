@@ -3,7 +3,7 @@ using namespace Rcpp;
 
 //' @title Guess Vector Type
 //'
-//' @details Function analyses content of a factor vector and attempts to
+//' @description Function analyses content of a factor vector and attempts to
 //'   guess the correct type.
 //'
 //' @param x A vector of factor class.
@@ -13,6 +13,6 @@ using namespace Rcpp;
 //' @export
 
 // [[Rcpp::export]]
-NumericVector timesTwo(NumericVector x) {
+NumericVector guess_vector_type(NumericVector x) {
   return x * 2;
 }
