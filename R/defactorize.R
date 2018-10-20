@@ -31,4 +31,6 @@ defactorize <- function(x) {
                   all.missing = FALSE,
                   null.ok = FALSE)
 
+    # TODO: Get vector type using provided Rcp function
+
 }
