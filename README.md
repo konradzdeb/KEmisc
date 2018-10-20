@@ -4,6 +4,7 @@ KEmisc
 
 [![Travis build
 status](https://travis-ci.org/konradedgar/KEmisc.svg?branch=master)](https://travis-ci.org/konradedgar/KEmisc)
+[![codecov](https://codecov.io/gh/konradedgar/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradedgar/KEmisc)
 
 KEmisc provides a disorganised collection of small convenience and
 utility functions. I mostly use this package as remote storage for
