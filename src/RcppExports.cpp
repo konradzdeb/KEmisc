@@ -6,12 +6,12 @@
 using namespace Rcpp;
 
 // guess_vector_type
-Rcpp::String guess_vector_type(Rcpp::RObject x);
+Rcpp::String guess_vector_type(Rcpp::IntegerVector x);
 RcppExport SEXP _KEmisc_guess_vector_type(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::RObject >::type x(xSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(guess_vector_type(x));
     return rcpp_result_gen;
 END_RCPP
