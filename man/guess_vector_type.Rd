@@ -16,3 +16,9 @@ A scalar string with class name.
 Function analyses content of a factor vector and attempts to
   guess the correct type.
 }
+\section{Acknowledgements}{
+
+The initial version of this function was posted and discussed on
+  \href{https://stackoverflow.com/q/52943081/1655567}{StackOverflow}.
+}
+

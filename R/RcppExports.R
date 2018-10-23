@@ -10,6 +10,10 @@
 #'
 #' @return A scalar string with class name.
 #'
+#' @section Acknowledgements:
+#' The initial version of this function was posted and discussed on
+#'   \href{https://stackoverflow.com/q/52943081/1655567}{StackOverflow}.
+#'
 #' @export
 #'
 guess_vector_type <- function(x) {

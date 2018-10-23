@@ -2,7 +2,6 @@
 
 // [[Rcpp::plugins(cpp11)]]
 
-
 //' @title Guess Vector Type
 //'
 //' @description Function analyses content of a factor vector and attempts to
@@ -11,6 +10,10 @@
 //' @param x A vector of factor class.
 //'
 //' @return A scalar string with class name.
+//'
+//' @section Acknowledgements:
+//' The initial version of this function was posted and discussed on
+//'   \href{https://stackoverflow.com/q/52943081/1655567}{StackOverflow}.
 //'
 //' @export
 //'
@@ -68,7 +71,7 @@ Rcpp::String guess_vector_type(Rcpp::IntegerVector x) {
     int max_val;
     max_val = num_doubles > num_integers? (num_doubles > num_strings? num_doubles: num_strings): (num_integers > num_strings? num_integers: num_strings);
 
-    // Results storage
+    // Create results storage
     Rcpp::String res;
 
 
