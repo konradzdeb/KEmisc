@@ -27,8 +27,9 @@ Rcpp::String guess_vector_type(Rcpp::IntegerVector x) {
 
     // Converted strings
     double converted_double;
-    int converted_integer;
 
+    // flag for runnig more tests
+    bool is_number;
 
     // Get character vector with levels
     Rcpp::StringVector levels = x.attr("levels");
@@ -43,27 +44,31 @@ Rcpp::String guess_vector_type(Rcpp::IntegerVector x) {
         int element = x[index];
         // Convert to normal string
         std::string temp = Rcpp::as<std::string>(levels[element - 1]);
-        // Try converting to an integer
-        try
-        {
-            converted_integer = std::stoi(temp);
-        }
-        catch(...)
-        {
-            // Try converting to a doubke
-            try
-            {
-                // Convert to ineteges
-                converted_double = std::stod(temp);
-            }
-            catch(...)
-            {
-                ++num_integers;
-            }
-            ++num_doubles;
-        }
-        ++num_strings;
 
+        // Reset number checking flag
+        is_number = 1;
+
+        // Attempt conversion to double
+        try {
+            converted_double = std::stod(temp);
+            } catch(...) {
+                // Conversion failed, increase string count
+                ++num_strings;
+                // Do not run more test
+                is_number = 0;
+            }
+
+        // If number run more tests
+        if (is_number == 1) {
+            // Check if converted string is an integer
+            if(floor(converted_double) == converted_double) {
+                // Increase counter for integer
+                ++num_integers;
+            } else {
+                // Increase count for doubles
+                ++num_doubles;
+            }
+        }
     }
 
     // Get max value of three variables
