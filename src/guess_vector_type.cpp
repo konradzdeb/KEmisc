@@ -42,7 +42,7 @@ Rcpp::String guess_vector_type(Rcpp::IntegerVector x) {
         // Get value of a specific vector element
         int element = x[index];
         // Convert to normal string
-        std::string temp = Rcpp::as<std::string>(levels[element]);
+        std::string temp = Rcpp::as<std::string>(levels[element - 1]);
         // Try converting to an integer
         try
         {
