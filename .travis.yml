@@ -7,8 +7,12 @@ cache: packages
 addons:
   apt:
     sources:
+     - ubuntu-toolchain-r-test
      - sourceline: 'deb https://dl.bintray.com/libgit2/ci-dependencies trusty libgit2deps'
        key_url: 'https://bintray.com/user/downloadSubjectPublicKey?username=bintray'
+    packages:
+     - gcc-4.9
+     - g++-4.9
 
 r_packages:
   - covr
