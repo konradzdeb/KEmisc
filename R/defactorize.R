@@ -12,9 +12,10 @@
 #' The function disregards \code{\link[base]{levels}} information available in
 #'   vectors of the \code{\link[base]{factor}} class.
 #'
-#' @param x
+#' @param x A factor.
 #'
-#' @return
+#' @return A vector of equivalent length of class numeric, integer or
+#'   character.
 #'
 #' @importFrom checkmate assert_class assert_vector
 #' @export

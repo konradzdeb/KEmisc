@@ -7,10 +7,11 @@
 defactorize(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{A factor.}
 }
 \value{
-
+A vector of equivalent length of class numeric, integer or
+  character.
 }
 \description{
 The function attempts to change vector
