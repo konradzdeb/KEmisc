@@ -18,7 +18,6 @@ test_that(desc = "Integer is returned for factor with integers",
           ))),
           expected = "integer"))
 
-
 test_that(desc = "Correct class is guessedfor a mixed vector (mostly doubles)",
           code = expect_identical(object = guess_vector_type(as.factor(
               sapply(runif(n = 1e4), function(vec_elm) {
@@ -30,8 +29,6 @@ test_that(desc = "Correct class is guessedfor a mixed vector (mostly doubles)",
               })
           )),
           expected = "double"))
-
-
 
 test_that(desc = "Correct class is guessedfor a mixed vector (mostly integers)",
           code = expect_identical(object = guess_vector_type(as.factor(
