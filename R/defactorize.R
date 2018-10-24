@@ -22,6 +22,7 @@
 #'
 #' @examples
 #' defactorize(as.factor(c("a", "b")))
+#' defactorize(as.factor(c("a", "b", runinf(n = 10))))
 #'
 defactorize <- function(x) {
     # Check if provided variable is a factor vector
@@ -32,6 +33,16 @@ defactorize <- function(x) {
                   all.missing = FALSE,
                   null.ok = FALSE)
 
-    # TODO: Get vector type using provided Rcp function
+    # Guess vector content using provided Rcpp function
+    vector_contet <- guess_vector_type(x = x)
+
+    # Convert
+    res <- switch(EXPR = vector_contet,
+                  character = as.character(x),
+                  double = as.numeric(x),
+                  integer = as.integer(x))
+
+    # Return resuls
+    return(res)
 
 }

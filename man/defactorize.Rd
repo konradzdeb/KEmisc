@@ -31,5 +31,6 @@ The function disregards \code{\link[base]{levels}} information available in
 
 \examples{
 defactorize(as.factor(c("a", "b")))
+defactorize(as.factor(c("a", "b", runinf(n = 10))))
 
 }
