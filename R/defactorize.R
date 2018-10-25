@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' defactorize(as.factor(c("a", "b")))
-#' defactorize(as.factor(c("a", "b", runinf(n = 10))))
+#' defactorize(as.factor(c("a", "b", runif(n = 10))))
 #'
 defactorize <- function(x) {
     # Check if provided variable is a factor vector
@@ -44,5 +44,4 @@ defactorize <- function(x) {
 
     # Return resuls
     return(res)
-
 }
