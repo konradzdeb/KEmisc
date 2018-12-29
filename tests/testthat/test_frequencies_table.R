@@ -1,4 +1,4 @@
-context("Test creating frequencies table")
+context("Creating frequencies table")
 
 test_that(
     desc = "Returned object is a data frame.",

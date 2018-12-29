@@ -1,4 +1,4 @@
-context("Test formatting cut2 output")
+context("Formatting cut2 output")
 
 
 # Only run this test if Hmisc exists

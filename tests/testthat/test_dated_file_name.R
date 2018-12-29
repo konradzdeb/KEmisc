@@ -1,4 +1,4 @@
-context("Test dated file name creation")
+context("Dated file name creation")
 
 test_that(
     desc = "Created file name is a string",
