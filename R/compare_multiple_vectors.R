@@ -1,7 +1,7 @@
 #' @title Compare Values of Multiple Vectors
 #'
 #' @description The function compares values across multiple vectors using
-#'   \code{\link[base]{all.eqal}}.
+#'   \code{\link[base]{all.equal}}.
 #'
 #' @param x Alist of vectors to compare
 #' @param ... as in  \code{\link[base]{all.equal}}

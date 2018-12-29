@@ -16,7 +16,7 @@ A logical
 }
 \description{
 The function compares values across multiple vectors using
-  \code{\link[base]{all.eqal}}.
+  \code{\link[base]{all.equal}}.
 }
 \examples{
 # Returns TRUE

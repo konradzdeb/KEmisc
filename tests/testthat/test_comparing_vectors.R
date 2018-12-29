@@ -25,8 +25,11 @@ test_that(desc = "False is returned if vectors differ",
           ))))
 
 test_that(desc = "Comparing more than three identical vectors",
-          code = expect_true(object = compare_multiple_vectors(x = list(
-              rep(runif(n = 10), tmes = 1e3)
+          code = expect_true(object = compare_multiple_vectors(x = lapply(
+              X = vector(mode = "list", length = 1e3),
+              FUN = function(...) {
+                  c(1, 2, 3)
+              }
           ))))
 
 test_that(desc = "Comparing more than three different vectors",
@@ -34,3 +37,9 @@ test_that(desc = "Comparing more than three different vectors",
               rep(runif(n = 10), tmes = 1e3), 2
           ))))
 
+test_that(desc = "Passing arguments to all.qual works",
+          code = expect_true(object = compare_multiple_vectors(
+              x = list(c(1, 2),
+                       c(2, 2)),
+              tolerance = 1
+          )))
