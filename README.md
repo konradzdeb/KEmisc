@@ -1,4 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 KEmisc
 ======
 
@@ -10,9 +11,9 @@ status](https://travis-ci.org/konradedgar/KEmisc.svg?branch=master)](https://tra
 status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)
 
 KEmisc provides a disorganised collection of small convenience and
-utility functions. I mostly use this package as remote storage for
-functions that I want to have available. It’s rather unlikely that
-anyone will find it useful.
+utility functions. I use this package as a storage for random and weird
+functions that I want to have at hand. It’s rather unlikely that anyone
+will find it useful and that this “package” will appear on CRAN..
 
 Installation
 ------------
