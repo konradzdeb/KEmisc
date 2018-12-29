@@ -4,7 +4,7 @@
 #'   \code{\link[base]{all.eqal}}.
 #'
 #' @param x Alist of vectors to compare
-#' @param ... as in  \code{\link[base]{all.eqal}}
+#' @param ... as in  \code{\link[base]{all.equal}}
 #'
 #' @return A logical
 #'

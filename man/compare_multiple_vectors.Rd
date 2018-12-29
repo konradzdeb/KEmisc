@@ -9,7 +9,7 @@ compare_multiple_vectors(x, ...)
 \arguments{
 \item{x}{Alist of vectors to compare}
 
-\item{...}{as in  \code{\link[base]{all.eqal}}}
+\item{...}{as in  \code{\link[base]{all.equal}}}
 }
 \value{
 A logical
