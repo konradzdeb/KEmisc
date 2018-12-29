@@ -10,7 +10,7 @@
 #'
 #' @export
 #'
-#' @importFrom assert_atomic_vector checkmate
+#' @importFrom checkmate assert_atomic_vector
 #'
 #' @examples
 #' # Returns TRUE
@@ -23,4 +23,23 @@ compare_multiple_vectors <- function(x, ...) {
     # Check if all elements of x are atomic vectors
     Vectorize(FUN = checkmate::assert_atomic_vector,
               vectorize.args = "x")(x)
+
+    # Compare list elements
+    Reduce(
+        f = function(a, b, ...) {
+            if (isTRUE(all.equal(target = a, current = b, ...))) {
+                a
+            } else {
+                FALSE
+            }
+        },
+        x = x
+    ) -> res_red
+
+    # Return results
+    if (isFALSE(res_red)) {
+        return(FALSE)
+    } else {
+        return(TRUE)
+    }
 }

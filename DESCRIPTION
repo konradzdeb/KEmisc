@@ -4,7 +4,7 @@ Version: 0.0.4
 Authors@R: person("Konrad", "Zdeb", email = "konrad.zdeb@me.com", role = c("aut", "cre"))
 Description: The package provides disorganised collection of random convenience 
   and utility functions.
-Depends: R (>= 3.3.0)
+Depends: R (>= 3.4.2)
 Imports: 
     checkmate,
     scales (>= 0.5.0),
@@ -17,8 +17,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 LinkingTo: 
     Rcpp
 SystemRequirements: C++11
-
