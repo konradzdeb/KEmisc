@@ -26,7 +26,7 @@ compare_multiple_vectors <- function(x, ...) {
 
     # Compare list elements
     Reduce(
-        f = function(a, b, ...) {
+        f = function(a, b) {
             if (isTRUE(all.equal(target = a, current = b, ...))) {
                 a
             } else {
