@@ -4,22 +4,33 @@
 \alias{create_dated_file_name}
 \title{Create Dated File/Path Name}
 \usage{
-create_dated_file_name(x, timestamp_format = "\%d-\%m-\%Y", sep = "-")
+create_dated_file_name(x, timestamp_format = "\%d-\%m-\%Y", sep = "-",
+  extension)
 }
 \arguments{
 \item{x}{A character vector.}
 
-\item{timestamp_format}{A string scalar.}
+\item{timestamp_format}{A string scalar for time format, as in
+\code{\link[base]{strptime}}.}
 
-\item{sep}{A string scalar.}
+\item{sep}{A string scalar to separate file name parts.}
+
+\item{extension}{A string scalar with file type extension.}
 }
 \value{
 A character vector of length corresponding to x.
 }
 \description{
-This is trival function that wraps \code{\link[base]{paste}}
-  call and prduces a string with \code{\link[base]{Sys.time}} results.
+This is trivial function wraps \code{\link[base]{paste}}
+  call and produces a string with \code{\link[base]{Sys.time}} and an
+  optional extension.
+}
+\details{
+This simple function is convenient for automatically generating
+  file names with the current date and/or time.
 }
 \examples{
 create_dated_file_name(x = "file_name")
+create_dated_file_name(x = "annual_file", timestamp_format = "\%Y")
+create_dated_file_name(x = "time_file", timestamp_format = "\%H:\%M:\%S")
 }
