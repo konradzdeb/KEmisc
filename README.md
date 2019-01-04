@@ -5,8 +5,10 @@
 [![Travis build
 status](https://travis-ci.org/konradedgar/KEmisc.svg?branch=master)](https://travis-ci.org/konradedgar/KEmisc)
 [![codecov](https://codecov.io/gh/konradedgar/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradedgar/KEmisc)
-<https://www.r-pkg.org/badges/version/KEmisc> [![Build
+[![Build
 status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/KEmisc)](https://cran.r-project.org/package=KEmisc)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
