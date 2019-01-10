@@ -22,12 +22,12 @@ A character vector of length corresponding to x.
 }
 \description{
 This is trivial function wraps \code{\link[base]{paste}}
-  call and produces a string with \code{\link[base]{Sys.time}} and an
-  optional extension.
+call and produces a string with \code{\link[base]{Sys.time}} and an
+optional extension.
 }
 \details{
 This simple function is convenient for automatically generating
-  file names with the current date and/or time.
+file names with the current date and/or time.
 }
 \examples{
 create_dated_file_name(x = "file_name")

@@ -17,8 +17,8 @@ A data frame.
 }
 \description{
 The function constructs a data frame from \code{\link[base]{table}}
-  function and optionally passes results to \code{\link[utils]{View}}
-  function for easier preview.
+function and optionally passes results to \code{\link[utils]{View}}
+function for easier preview.
 }
 \examples{
 \dontrun{

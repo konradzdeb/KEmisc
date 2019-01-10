@@ -16,7 +16,7 @@ A matrix with frequency values of a vector
 }
 \description{
 Simplefunction showing frequencies of vector by combining
-  results from \code{\link[base]{table}} and \code{\link[base]{prop.table}}.
+results from \code{\link[base]{table}} and \code{\link[base]{prop.table}}.
 }
 \examples{
 preview_frequency_table(x = c("a", rep("b", 3)))

@@ -14,16 +14,16 @@ created object.}
 }
 \value{
 A R object corresponding to \code{basename} on \code{file_path}
-  argument.
+argument.
 }
 \description{
 The function provides conveniance mechanism for creating R
-  objects corresponding to names of RDS files.
+objects corresponding to names of RDS files.
 }
 \details{
 For instance, when executing
-  \code{saved_data <- readRDS("file_path_to/saved_data.RDS")} we may do
-  \code{read_RDS_to_global("file_path_to/saved_data.RDS")}.
+\code{saved_data <- readRDS("file_path_to/saved_data.RDS")} we may do
+\code{read_RDS_to_global("file_path_to/saved_data.RDS")}.
 }
 \examples{
 \dontrun{

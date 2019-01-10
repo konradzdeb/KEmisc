@@ -11,7 +11,7 @@ bare_file_name(x)
 }
 \value{
 A character vector corresponding to file name without path and
-  extension.
+extension.
 }
 \description{
 The function provides bare file name without path and extension.

@@ -16,8 +16,8 @@ A character vector.
 }
 \description{
 Conveniance wrapper on useful \code{\link[scales]{unit_format}}
-  function offered within \code{scales} package. Useful when producing scales
-  without 0: \code{"" "1K" "10K"} instead of \code{"0k" "1K" "10K"}.
+function offered within \code{scales} package. Useful when producing scales
+without 0: \code{"" "1K" "10K"} instead of \code{"0k" "1K" "10K"}.
 }
 \examples{
 vec_tst <- c(0, 1000, 1e6)
