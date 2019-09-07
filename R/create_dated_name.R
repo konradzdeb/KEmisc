@@ -56,7 +56,7 @@ create_dated_file_name <- function(x,
                      na.ok = FALSE,
                      null.ok = FALSE)
         # Add to file name
-        paste0(file_name, extension) -> file_name
+        file_name <- paste0(file_name, extension)
     }
 
     return(file_name)
