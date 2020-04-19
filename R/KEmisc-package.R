@@ -13,6 +13,8 @@
 #'   can be found back via my
 #'   \href{https://stackoverflow.com/users/1655567/konrad?tab=questions}{SO profile.}
 #'
-#' @useDynLib KEmisc, .registration = TRUE
+#' ## usethis namespace: start
 #' @importFrom Rcpp sourceCpp
-"_PACKAGE"
+#' @useDynLib KEmisc, .registration = TRUE
+## usethis namespace: end
+NULL
