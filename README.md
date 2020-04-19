@@ -3,10 +3,10 @@
 # KEmisc
 
 [![Travis build
-status](https://travis-ci.org/konradedgar/KEmisc.svg?branch=master)](https://travis-ci.org/konradedgar/KEmisc)
-[![codecov](https://codecov.io/gh/konradedgar/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradedgar/KEmisc)
+status](https://travis-ci.org/konradzdeb/KEmisc.svg?branch=master)](https://travis-ci.org/konradzdeb/KEmisc)
+[![codecov](https://codecov.io/gh/konradzdeb/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradzdeb/KEmisc)
 [![Build
-status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)
+status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradzdeb/kemisc)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/KEmisc)](https://cran.r-project.org/package=KEmisc)
 [![License:
@@ -21,9 +21,9 @@ will find this package useful and that it will ever appear on CRAN.
 
 ``` r
 if (requireNamespace("devtools", quietly = TRUE)) {
-    devtools::install_github('konradedgar/KEmisc')
+    devtools::install_github('konradzdeb/KEmisc')
 } else {
     install.packages("devtools")
-    devtools::install_github('konradedgar/KEmisc')
+    devtools::install_github('konradzdeb/KEmisc')
 }
 ```
