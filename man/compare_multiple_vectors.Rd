@@ -7,7 +7,7 @@
 compare_multiple_vectors(x, ...)
 }
 \arguments{
-\item{x}{Alist of vectors to compare}
+\item{x}{A list of vectors to compare}
 
 \item{...}{as in  \code{\link[base]{all.equal}}}
 }
@@ -16,7 +16,7 @@ A logical
 }
 \description{
 The function compares values across multiple vectors using
-\code{\link[base]{all.equal}}.
+  \code{\link[base]{all.equal}}.
 }
 \examples{
 # Returns TRUE

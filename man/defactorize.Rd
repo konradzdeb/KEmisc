@@ -11,22 +11,22 @@ defactorize(x)
 }
 \value{
 A vector of equivalent length of class numeric, integer or
-character.
+  character.
 }
 \description{
 The function attempts to change vector
-\code{\link[base]{class}} from \code{\link[base]{factor}} to
-\code{\link[base]{integer}}, \code{\link[base]{double}} or
-\code{\link[base]{character}}.
+  \code{\link[base]{class}} from \code{\link[base]{factor}} to
+  \code{\link[base]{integer}}, \code{\link[base]{double}} or
+  \code{\link[base]{character}}.
 }
 \details{
 The function tries to handle factors of unknown content by
-attempting to apply different classes and looking for warnings.
+  attempting to apply different classes and looking for warnings.
 }
 \section{Warning}{
 
 The function disregards \code{\link[base]{levels}} information available in
-vectors of the \code{\link[base]{factor}} class.
+  vectors of the \code{\link[base]{factor}} class.
 }
 
 \examples{

@@ -3,7 +3,7 @@
 #' @description The function compares values across multiple vectors using
 #'   \code{\link[base]{all.equal}}.
 #'
-#' @param x Alist of vectors to compare
+#' @param x A list of vectors to compare
 #' @param ... as in  \code{\link[base]{all.equal}}
 #'
 #' @return A logical

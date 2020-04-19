@@ -1,6 +1,6 @@
-#' @title Read RDS Ffile Directly to Global Environment
+#' @title Read RDS file Directly to Global Environment
 #'
-#' @description The function provides conveniance mechanism for creating R
+#' @description The function provides convenience mechanism for creating R
 #'   objects corresponding to names of RDS files.
 #'
 #' @details For instance, when executing
@@ -9,7 +9,7 @@
 #'
 #' @param file_path Path to the RDS file.
 #'
-#' @param verbose A logica, if \code{TRUE} prints a short message with name of
+#' @param verbose A logical, if \code{TRUE} prints a short message with name of
 #'   created object.
 #'
 #' @return A R object corresponding to \code{basename} on \code{file_path}

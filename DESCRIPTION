@@ -23,7 +23,8 @@ Imports:
     tools (>= 3.0.0),
     utils
 Suggests: 
-    testthat
+    testthat,
+    spelling
 LinkingTo: 
     Rcpp
 VignetteBuilder: 
@@ -34,3 +35,4 @@ Roxygen: list(markdown = FALSE, roclets = c("rd", "namespace",
     "collate"))
 RoxygenNote: 7.1.0
 SystemRequirements: C++11
+Language: en-GB

@@ -1,4 +1,4 @@
-#' @title Threeway operator
+#' @title Three-way operator
 #'
 #' @description A three-way comparison takes two values A and B determines
 #'   whether A < B, A = B, or A > B in a single operation.
@@ -18,11 +18,18 @@
     if (typeof(lhs) != typeof(rhs)) {
         warning("Left and rght hand operators are not of identical types.")
     }
-    if (lhs > rhs) {
-        lhs
-    } else if (lhs < rhs) {
-        rhs
-    } else if (lhs == rhs) {
-        0
+
+    # Single comparison function
+    f_check <- function(lhs, rhs) {
+        if (lhs > rhs) {
+            lhs
+        } else if (lhs < rhs) {
+            rhs
+        } else if (lhs == rhs) {
+            0
+        }
     }
+
+    # Run on each element of vector
+    purrr::modify2(.x = lhs, .y = rhs, .f = f_check)
 }

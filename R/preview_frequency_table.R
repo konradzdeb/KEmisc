@@ -1,6 +1,6 @@
 #' @title Preview Frequency Tables
 #'
-#' @description Simplefunction showing frequencies of vector by combining
+#' @description Simple function showing frequencies of vector by combining
 #'   results from \code{\link[base]{table}} and \code{\link[base]{prop.table}}.
 #'
 #' @param x A vector.
