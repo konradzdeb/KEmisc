@@ -7,6 +7,8 @@ status](https://travis-ci.org/konradzdeb/KEmisc.svg?branch=master)](https://trav
 [![codecov](https://codecov.io/gh/konradzdeb/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradzdeb/KEmisc)
 [![Build
 status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)
+[![R build
+status](https://github.com/konradzdeb/KEmisc/workflows/R-CMD-check/badge.svg)](https://github.com/konradzdeb/KEmisc/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/KEmisc)](https://cran.r-project.org/package=KEmisc)
 [![License:

@@ -10,3 +10,4 @@ sessionInfoLog
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^\.github$
