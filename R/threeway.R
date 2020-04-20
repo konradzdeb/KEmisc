@@ -16,7 +16,7 @@
 #' 3 %<=>% 3
 `%<=>%` <- function(lhs, rhs) {
     if (typeof(lhs) != typeof(rhs)) {
-        warning("Left and rght hand operators are not of identical types.")
+        warning("Left and right hand operators are not of identical types.")
     }
 
     # Single comparison function
