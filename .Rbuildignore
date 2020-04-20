@@ -7,3 +7,6 @@
 ^README-.*\.png$
 sessionInfoLog
 ^\.github/workflows$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
