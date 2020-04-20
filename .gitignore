@@ -4,3 +4,5 @@
 .RData
 # Ignore session log
 sessionInfoLog
+# Side
+docs/
