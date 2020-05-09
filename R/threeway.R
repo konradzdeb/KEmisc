@@ -31,5 +31,10 @@
     }
 
     # Run on each element of vector
-    purrr::modify2(.x = lhs, .y = rhs, .f = f_check)
+    withCallingHandlers(
+        expr = purrr::modify2(.x = lhs, .y = rhs, .f = f_check),
+        error = function(e) {
+            "Compared vectors should be of equal lengths"
+        }
+    )
 }

@@ -14,3 +14,10 @@ test_that(
     expect_warning(object = "a" %<=>% 1,
                    regexp = "Left\\sand\\sright.*")
 )
+
+test_that("Generates error for vectors of different lengths",
+          expect_error(object = {
+              a <- 1:3
+              b <- 1:2
+              a %<=>% b
+          }))
