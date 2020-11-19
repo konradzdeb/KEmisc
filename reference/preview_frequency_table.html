@@ -73,19 +73,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">KEmisc</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.5</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -114,10 +108,10 @@
 
     <div class="ref-description">
     <p>Simple function showing frequencies of vector by combining
-  results from <code><a href='https://rdrr.io/r/base/table.html'>table</a></code> and <code><a href='https://rdrr.io/r/base/prop.table.html'>prop.table</a></code>.</p>
+  results from <code><a href='https://rdrr.io/r/base/table.html'>table</a></code> and <code><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>preview_frequency_table</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>preview_frequency_table</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -137,7 +131,8 @@
     <p>A matrix with frequency values of a vector</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>preview_frequency_table</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"b"</span>, <span class='fl'>3</span>)))</div><div class='output co'>#&gt;   num_obs freq
+    <pre class="examples"><div class='input'><span class='fu'>preview_frequency_table</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>, <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"b"</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   num_obs freq
 #&gt; a       1 0.25
 #&gt; b       3 0.75</div><div class='input'>
 </div></pre>
@@ -156,7 +151,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

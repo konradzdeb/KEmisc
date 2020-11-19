@@ -73,19 +73,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">KEmisc</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.5</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -117,7 +111,7 @@
   Remaining triangle is replaced with NAs.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_triangle</span>(<span class='no'>cormat</span>, <span class='kw'>part</span> <span class='kw'>=</span> <span class='st'>"upper"</span>)</pre>
+    <pre class="usage"><span class='fu'>get_triangle</span><span class='op'>(</span><span class='va'>cormat</span>, part <span class='op'>=</span> <span class='st'>"upper"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -143,8 +137,9 @@
   <code><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></code> functions.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>M</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span>:<span class='fl'>20</span>, <span class='fl'>5</span>, <span class='fl'>5</span>)
-<span class='fu'>get_triangle</span>(<span class='kw'>cormat</span> <span class='kw'>=</span> <span class='no'>M</span>, <span class='kw'>part</span> <span class='kw'>=</span> <span class='st'>"upper"</span>)</div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4] [,5]
+    <pre class="examples"><div class='input'><span class='va'>M</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>20</span>, <span class='fl'>5</span>, <span class='fl'>5</span><span class='op'>)</span>
+<span class='fu'>get_triangle</span><span class='op'>(</span>cormat <span class='op'>=</span> <span class='va'>M</span>, part <span class='op'>=</span> <span class='st'>"upper"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4] [,5]
 #&gt; [1,]    1    6   11   16    1
 #&gt; [2,]   NA    7   12   17    2
 #&gt; [3,]   NA   NA   13   18    3
@@ -165,7 +160,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
