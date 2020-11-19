@@ -6,3 +6,5 @@
 sessionInfoLog
 # Side
 docs/
+# Mac files
+.DS_Store
