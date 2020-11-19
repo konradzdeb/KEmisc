@@ -1,6 +1,6 @@
 Package: KEmisc
 Title: Collection of Random Convenience and Utility Function
-Version: 0.0.4.9001
+Version: 0.0.5
 Authors@R: 
     person(given = "Konrad",
            family = "Zdeb",

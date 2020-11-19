@@ -1,4 +1,7 @@
-# KEmisc (development version)
+# KEmisc  0.0.5
+
+* Added `compare_three`
+* Minor cleaning and fixes
 
 # KEmisc 0.0.4
 
