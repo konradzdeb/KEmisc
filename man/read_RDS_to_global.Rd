@@ -4,13 +4,15 @@
 \alias{read_RDS_to_global}
 \title{Read RDS file Directly to Global Environment}
 \usage{
-read_RDS_to_global(file_path, verbose = TRUE)
+read_RDS_to_global(file_path, verbose = TRUE, pos = 1)
 }
 \arguments{
 \item{file_path}{Path to the RDS file.}
 
 \item{verbose}{A logical, if \code{TRUE} prints a short message with name of
 created object.}
+
+\item{pos}{defaults to 1 which equals an assingment to global environment}
 }
 \value{
 A R object corresponding to \code{basename} on \code{file_path}

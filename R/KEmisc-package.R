@@ -1,6 +1,8 @@
-#' @title Kmisc: colleaction of misceallous functions
+#' @title KEmisc: collection of miscellaneous functions
 #'
-#' @description Kmisc provides a disorganised collection of convenience and
+#' @name KEmisc-package
+#'
+#' @description KEmisc provides a disorganised collection of convenience and
 #'   utility functions.
 #'
 #' @details The package was developed out of need to keep random handy functions,
