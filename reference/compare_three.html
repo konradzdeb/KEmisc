@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create Dated File/Path Name — create_dated_file_name • KEmisc</title>
+<title>Compare Three Vectors — compare_three • KEmisc</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,9 @@
 
 
 
-<meta property="og:title" content="Create Dated File/Path Name — create_dated_file_name" />
-<meta property="og:description" content="This is trivial function wraps paste
-  call and produces a string with Sys.time and an
-  optional extension." />
+<meta property="og:title" content="Compare Three Vectors — compare_three" />
+<meta property="og:description" content="Convenience function comparing three elements using a desired
+  comparator function." />
 
 
 
@@ -102,59 +101,55 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create Dated File/Path Name</h1>
+    <h1>Compare Three Vectors</h1>
     
-    <div class="hidden name"><code>create_dated_file_name.Rd</code></div>
+    <div class="hidden name"><code>compare_three.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This is trivial function wraps <code><a href='https://rdrr.io/r/base/paste.html'>paste</a></code>
-  call and produces a string with <code><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></code> and an
-  optional extension.</p>
+    <p>Convenience function comparing three elements using a desired
+  comparator function.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>create_dated_file_name</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>compare_three</span><span class='op'>(</span>
   <span class='va'>x</span>,
-  timestamp_format <span class='op'>=</span> <span class='st'>"%d-%m-%Y"</span>,
-  sep <span class='op'>=</span> <span class='st'>"-"</span>,
-  <span class='va'>extension</span>
+  <span class='va'>y</span>,
+  <span class='va'>z</span>,
+  compare_fun <span class='op'>=</span> <span class='st'>"identical"</span>,
+  result <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"single"</span>, <span class='st'>"itemized"</span><span class='op'>)</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A character vector.</p></td>
+      <th>x, y, z</th>
+      <td><p>Vectors of equal length to compare</p></td>
     </tr>
     <tr>
-      <th>timestamp_format</th>
-      <td><p>A string scalar for time format, as in
-<code><a href='https://rdrr.io/r/base/strptime.html'>strptime</a></code>.</p></td>
+      <th>compare_fun</th>
+      <td><p>A function used to compare defaults to
+<code><a href='https://rdrr.io/r/base/identical.html'>identical</a></code>.</p></td>
     </tr>
     <tr>
-      <th>sep</th>
-      <td><p>A string scalar to separate file name parts.</p></td>
-    </tr>
-    <tr>
-      <th>extension</th>
-      <td><p>A string scalar with file type extension.</p></td>
+      <th>result</th>
+      <td><p>For <em>single</em> it will return logical scalar <code>TRUE</code> if
+all arguments are identical; for <em>itemized</em> it will return vector of
+length equal to lengths of passed arguments. Defaults to <em>single</em>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A character vector of length corresponding to x.</p>
+    <p>A logical vector of length equal to <code>a, b, c</code></p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This simple function is convenient for automatically generating
-  file names with the current date and/or time.</p>
+    <p>The results of the comparator function are tested with</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>create_dated_file_name</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"file_name"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "file_name-20-11-2020"</div><div class='input'><span class='fu'>create_dated_file_name</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"annual_file"</span>, timestamp_format <span class='op'>=</span> <span class='st'>"%Y"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "annual_file-2020"</div><div class='input'><span class='fu'>create_dated_file_name</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"time_file"</span>, timestamp_format <span class='op'>=</span> <span class='st'>"%H:%M:%S"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "time_file-00:13:04"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>compare_three</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='fu'>compare_three</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"b"</span>, <span class='st'>"a"</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"b"</span>, <span class='st'>"b"</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"b"</span>, <span class='st'>"c"</span><span class='op'>)</span>, result <span class='op'>=</span> <span class='st'>"itemized"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1]  TRUE FALSE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
