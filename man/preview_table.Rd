@@ -9,7 +9,7 @@ preview_table(x, Show = TRUE)
 \arguments{
 \item{x}{Vector passed to \code{\link[base]{table}}.}
 
-\item{Show}{A logical, defaults to \code{\link[base]{TRUE}}, runs
+\item{Show}{A logical, defaults to \code{\link[base:logical]{TRUE}}, runs
 \code{\link[utils]{View}}.}
 }
 \value{
