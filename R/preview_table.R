@@ -5,7 +5,7 @@
 #'   function for easier preview.
 #'
 #' @param x Vector passed to \code{\link[base]{table}}.
-#' @param Show A logical, defaults to \code{\link[base]{TRUE}}, runs
+#' @param Show A logical, defaults to \code{\link[base:logical]{TRUE}}, runs
 #'    \code{\link[utils]{View}}.
 #'
 #' @return A data frame.

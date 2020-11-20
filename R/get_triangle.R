@@ -8,7 +8,7 @@
 #'   \code{lower} part.
 #'
 #' @details The functions as a wrapper on \code{\link[base]{lower.tri}} and
-#'   \code{\link[base]{upper.tri}} functions.
+#'   \code{\link[base:lower.tri]{upper.tri}} functions.
 #'
 #' @return Object of dimensions \code{dim(cormat)} with \code{NA} values being
 #'   present in lower or upper triangle.
