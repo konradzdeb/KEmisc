@@ -12,7 +12,7 @@
 #' @param verbose A logical, if \code{TRUE} prints a short message with name of
 #'   created object.
 #'
-#' @param pos defaults to 1 which equals an assingment to global environment
+#' @param pos defaults to 1 which equals an assignment to global environment
 #'
 #' @return A R object corresponding to \code{basename} on \code{file_path}
 #'   argument.
