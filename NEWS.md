@@ -1,5 +1,8 @@
 # KEmisc 0.0.6
 
+* Added `compare_missing`
+* Expanded dependencies
+
 # KEmisc  0.0.5
 
 * Added `compare_three`
