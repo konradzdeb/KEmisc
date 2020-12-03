@@ -1,3 +1,5 @@
+# KEmisc 0.0.6
+
 # KEmisc  0.0.5
 
 * Added `compare_three`
