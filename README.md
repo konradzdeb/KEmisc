@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# KEmisc
+# KEmisc <img src='man/figures/logo.png' align="right" height="138" />
 
 <!-- badges: start -->
 [![codecov](https://codecov.io/gh/konradzdeb/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradzdeb/KEmisc)

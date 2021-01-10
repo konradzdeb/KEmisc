@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# KEmisc
+# KEmisc <img src='man/figures/logo.png' align="right" height="138" />
 
  <!-- badges: start -->
 [![codecov](https://codecov.io/gh/konradzdeb/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradzdeb/KEmisc) [![Build status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)   [![R build status](https://github.com/konradzdeb/KEmisc/workflows/R-CMD-check/badge.svg)](https://github.com/konradzdeb/KEmisc/actions)
