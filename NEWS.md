@@ -1,3 +1,5 @@
+# KEmisc 0.1.0
+
 # KEmisc 0.0.6
 
 * Added `compare_missing`
