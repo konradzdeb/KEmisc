@@ -2,8 +2,6 @@
 
 # KEmisc
 
-[![Travis build
-status](https://travis-ci.org/konradzdeb/KEmisc.svg?branch=master)](https://travis-ci.org/konradzdeb/KEmisc)
 [![codecov](https://codecov.io/gh/konradzdeb/KEmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/konradzdeb/KEmisc)
 [![Build
 status](https://ci.appveyor.com/api/projects/status/dfhwb7tplpk46mbw?svg=true)](https://ci.appveyor.com/project/konradedgar/kemisc)
