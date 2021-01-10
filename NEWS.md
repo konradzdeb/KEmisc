@@ -1,3 +1,8 @@
+# KEmisc 0.1.0
+
+* Added `most_recent` to identify most recent file
+* Minor cleaning in project set-up (removed dependency on Travis)
+
 # KEmisc 0.0.6
 
 * Added `compare_missing`

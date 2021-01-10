@@ -1,6 +1,6 @@
 Package: KEmisc
 Title: Collection of Random Convenience and Utility Function
-Version: 0.0.6
+Version: 0.1.0
 Authors@R: 
     person(given = "Konrad",
            family = "Zdeb",
@@ -14,6 +14,7 @@ Depends:
 Imports: 
     backports (>= 1.1.3),
     checkmate,
+    fs,
     knitr,
     purrr,
     Rcpp,
@@ -28,6 +29,7 @@ Imports:
     tidyr
 Suggests: 
     testthat,
+    withr,
     spelling
 LinkingTo: 
     Rcpp
