@@ -29,6 +29,7 @@ Imports:
     tidyr
 Suggests: 
     testthat,
+    Hmisc,
     withr,
     spelling
 LinkingTo: 
