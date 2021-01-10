@@ -17,6 +17,7 @@
 #'
 #' ## usethis namespace: start
 #' @importFrom Rcpp sourceCpp
+#' @importFrom rlang .data
 #' @useDynLib KEmisc, .registration = TRUE
 ## usethis namespace: end
 NULL
