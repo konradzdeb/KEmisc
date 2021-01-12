@@ -2,6 +2,7 @@
 
 export("%<=>%")
 export("%>%")
+export(add_moving_average)
 export(bare_file_name)
 export(compare_missing)
 export(compare_multiple_vectors)
