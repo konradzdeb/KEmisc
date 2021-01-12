@@ -22,6 +22,8 @@ add_moving_average(
 \item{val}{Column used to calculate moving average passed as bare column
 name or a character string.}
 
+\item{intervals}{A number of intervals for moving average.}
+
 \item{res_val}{Resulting moving average, defaults to name of \code{val}
 suffixed with \code{_mavg}.}
 
