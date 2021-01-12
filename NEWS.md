@@ -1,4 +1,4 @@
-# KEmisc (development version)
+# KEmisc 0.1.1
 
 # KEmisc 0.1.0
 
