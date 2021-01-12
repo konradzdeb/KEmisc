@@ -1,5 +1,7 @@
 # KEmisc 0.1.1
 
+* Added `add_moving_average` 
+
 # KEmisc 0.1.0
 
 * Added `most_recent` to identify most recent file
