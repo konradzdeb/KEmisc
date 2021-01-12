@@ -1,4 +1,6 @@
-# KEmisc (development version)
+# KEmisc 0.1.1
+
+* Added `add_moving_average` 
 
 # KEmisc 0.1.0
 
