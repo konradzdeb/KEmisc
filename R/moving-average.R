@@ -5,18 +5,13 @@
 #'
 #' @details The function can be used independently or within dplyr pipeline.
 #'
-#' @param .data A tibble or data frame.
-#' @param sort_cols Columns used for sorting passed in a manner consistent with
+#' @param x_order A vector used for sorting passed in a manner consistent with
 #'   \code{\link[dplyr]{arrange}}
-#' @param val Column used to calculate moving average passed as bare column
+#' @param x A vector used to calculate moving average passed as bare column
 #'   name or a character string.
-#' @param intervals A number of intervals for moving average.
-#' @param res_val Resulting moving average, defaults to name of \code{val}
-#'   suffixed with \code{_mavg}.
-#' @param restore_order A logical, defaults to \code{FALSE} if \code{TRUE} it
-#'   will restore original data order.
+#' @param intervals A number of intervals for moving average, defaults to 3.
 #'
-#' @return A tibble with appended moving average.
+#' @return A vector of length equivalent to
 #'
 #' @importFrom rlang :=
 #'
@@ -24,7 +19,7 @@
 #'
 #' @examples
 #' add_moving_average(mtcars, sort_cols = c("mpg", "cyl"), val = hp, intervals = 2)
-add_moving_average <-
+moving_average <-
     function(.data,
              sort_cols,
              val,
