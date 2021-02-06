@@ -14,6 +14,8 @@ moving_average(x, x_order, interval)
 
 \item{interval}{A number of intervals for moving average, defaults to
 \code{round(length(x) / 3, 0)}.}
+
+\item{na.rm}{As in \code{\link[base]{sum}}.}
 }
 \value{
 

@@ -10,6 +10,7 @@
 #'   \code{sort(x)}.
 #' @param interval A number of intervals for moving average, defaults to
 #'   \code{round(length(x) / 3, 0)}.
+#' @param na.rm As in \code{\link[base]{sum}}.
 #'
 #' @return A vector of length equivalent to \{x} with \code{NA} for
 #'   \code{x[1:intervals-1]}.
@@ -32,7 +33,7 @@ moving_average <- function(x, x_order, interval) {
         if (i < interval) {
             NA
         } else {
-            sum(x[i:(i - interval)]) / interval
+            sum(x[i:(i - interval)], na.rm = na.rm) / interval
         }
     })
 
