@@ -8,7 +8,7 @@
 #' @param x A vector used to calculate moving average.
 #' @param x_order A vector used for sorting of \code{x} defaults to
 #'   \code{sort(x)}.
-#' @param intervals A number of intervals for moving average, defaults to
+#' @param interval A number of intervals for moving average, defaults to
 #'   \code{round(length(x) / 3, 0)}.
 #'
 #' @return A vector of length equivalent to \{x} with \code{NA} for
@@ -17,37 +17,23 @@
 #' @export
 #'
 #' @examples
-#' moving_average(mtcars, sort_cols = c("mpg", "cyl"), val = hp, intervals = 2)
-moving_average <-
-    function(.data,
-             sort_cols,
-             val,
-             intervals = 2,
-             res_val = "{{val}}_mavg",
-             restore_order = FALSE) {
-
-        unique_id_name <- utils::tail(make.unique(c(colnames(.data), "ID")), 1)
-        data_w_index <- dplyr::mutate(.data, {{unique_id_name}} := dplyr::row_number())
-
-        index_col_name <- utils::tail(names(data_w_index), 1)
-
-        # Create desired number of calls to get moving average calculation
-        lag_calls <- paste0("lag(",  rlang::as_string(rlang::ensym(val)), ", ", 1:intervals, ")")
-        lag_call <- paste(lag_calls, collapse = " + ")
-        lag_call <- paste0("(", lag_call, ") / ", intervals)
-
-        data_sorted <- dplyr::arrange(data_w_index, dplyr::across(sort_cols))
-
-        data_avg <- dplyr::mutate(data_sorted,"{{val}}_mavg" := !!rlang::parse_expr(lag_call))
-
-        if (res_val != "{{val}}_mavg") {
-            data_avg <- dplyr::rename(data_avg, res_val = "{{val}}_mavg")
-        }
-
-        if (restore_order) {
-            data_avg <- dplyr::arrange(data_avg, !!rlang::sym(index_col_name))
-        }
-
-        data_avg <- dplyr::select(data_avg, -dplyr::last_col(1))
-        data_avg
+#' moving_average(x = sample(1:100, 10), x_order = 10:1)
+moving_average <- function(x, x_order, interval) {
+    if (missing(interval)) {
+        interval <- round(length(x) / 3, 0)
     }
+
+    if (!missing(x_order)) {
+        stopifnot(length(x) == length(x_order))
+        x <- x[x_order]
+    }
+
+    sapply(seq_along(x), function(i) {
+        if (i < interval) {
+            NA
+        } else {
+            sum(x[i:(i - interval)]) / interval
+        }
+    })
+
+}
