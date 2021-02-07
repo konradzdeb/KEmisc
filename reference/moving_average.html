@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Find most recent file or folder — most_recent • KEmisc</title>
+<title>Add Moving Average for an Arbitrary Number of Intervals — moving_average • KEmisc</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,9 +46,9 @@
 
 
 
-<meta property="og:title" content="Find most recent file or folder — most_recent" />
-<meta property="og:description" content="Searches path provided in the search_path and returns most recent file
-  or directory." />
+<meta property="og:title" content="Add Moving Average for an Arbitrary Number of Intervals — moving_average" />
+<meta property="og:description" content="The functions adds moving average for an arbitrary number of intervals. The
+  data can be returned sorted or according to the original order." />
 <meta property="og:image" content="https://konradzdeb.github.io/KEmisc/logo.png" />
 
 
@@ -111,46 +111,53 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Find most recent file or folder</h1>
+    <h1>Add Moving Average for an Arbitrary Number of Intervals</h1>
     
-    <div class="hidden name"><code>most_recent.Rd</code></div>
+    <div class="hidden name"><code>moving_average.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Searches path provided in the <code>search_path</code> and returns most recent file
-  or directory.</p>
+    <p>The functions adds moving average for an arbitrary number of intervals. The
+  data can be returned sorted or according to the original order.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>most_recent</span><span class='op'>(</span><span class='va'>search_path</span>, type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"any"</span>, <span class='st'>"file"</span>, <span class='st'>"directory"</span>, <span class='st'>"symlink"</span><span class='op'>)</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>moving_average</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>x_order</span>, <span class='va'>interval</span>, na.rm <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>search_path</th>
-      <td><p>A path to search</p></td>
+      <th>x</th>
+      <td><p>A vector used to calculate moving average.</p></td>
     </tr>
     <tr>
-      <th>type</th>
-      <td><p>Type of an object to return. Defaults to <code>any</code>, available
-options correspond to <code>type</code> argument in
-<code><a href='http://fs.r-lib.org/reference/dir_ls.html'>fs::dir_ls</a></code>.</p></td>
+      <th>x_order</th>
+      <td><p>A vector used for sorting of <code>x</code> defaults to
+<code><a href='https://rdrr.io/r/base/sort.html'>sort(x)</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>interval</th>
+      <td><p>A number of intervals for moving average, defaults to
+<code><a href='https://rdrr.io/r/base/Round.html'>round(length(x) / 3, 0)</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>na.rm</th>
+      <td><p>As in <code><a href='https://rdrr.io/r/base/sum.html'>sum</a></code>, defaults to <code>FALSE</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='http://fs.r-lib.org/reference/path.html'>path</a></code> object.</p>
+    <p>A vector of length equivalent to <code>x</code> with <code>NA</code> for
+  n &lt; interval as in <code>x[n]</code>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The function makes use of the directory listing function available
-  in the <code>fs</code> package - <code><a href='http://fs.r-lib.org/reference/dir_ls.html'>fs::dir_ls</a></code> and
-  consequently can return any objects that
-  <code><a href='http://fs.r-lib.org/reference/dir_ls.html'>fs::dir_ls</a></code> can identify.</p>
+    <p>The function can be used independently or within dplyr pipeline.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>most_recent</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #0000BB;background-color: #00BB00;'>/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmp4eW19J/downlit</span><span></div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>moving_average</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>100</span>, <span class='fl'>10</span><span class='op'>)</span>, x_order <span class='op'>=</span> <span class='fl'>10</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  [1]       NA       NA 53.33333 54.00000 65.33333 73.33333 60.66667 61.66667
+#&gt;  [9] 59.00000 57.00000</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
