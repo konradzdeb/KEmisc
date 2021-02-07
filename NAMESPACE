@@ -3,7 +3,6 @@
 export("%<=>%")
 export("%>%")
 export(bare_file_name)
-export(clean_sql_file)
 export(compare_missing)
 export(compare_multiple_vectors)
 export(compare_three)
