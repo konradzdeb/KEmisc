@@ -4,7 +4,7 @@
 \alias{moving_average}
 \title{Add Moving Average for an Arbitrary Number of Intervals}
 \usage{
-moving_average(x, x_order, interval)
+moving_average(x, x_order, interval, na.rm = FALSE)
 }
 \arguments{
 \item{x}{A vector used to calculate moving average.}
@@ -15,10 +15,11 @@ moving_average(x, x_order, interval)
 \item{interval}{A number of intervals for moving average, defaults to
 \code{round(length(x) / 3, 0)}.}
 
-\item{na.rm}{As in \code{\link[base]{sum}}.}
+\item{na.rm}{As in \code{\link[base]{sum}}, defaults to \code{FALSE}.}
 }
 \value{
-
+A vector of length equivalent to \code{x} with \code{NA} for
+  n < interval as in \code{x[n]}.
 }
 \description{
 The functions adds moving average for an arbitrary number of intervals. The

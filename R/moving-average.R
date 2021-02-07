@@ -10,16 +10,16 @@
 #'   \code{sort(x)}.
 #' @param interval A number of intervals for moving average, defaults to
 #'   \code{round(length(x) / 3, 0)}.
-#' @param na.rm As in \code{\link[base]{sum}}.
+#' @param na.rm As in \code{\link[base]{sum}}, defaults to \code{FALSE}.
 #'
-#' @return A vector of length equivalent to \{x} with \code{NA} for
-#'   \code{x[1:intervals-1]}.
+#' @return A vector of length equivalent to \code{x} with \code{NA} for
+#'   n < interval as in \code{x[n]}.
 #'
 #' @export
 #'
 #' @examples
 #' moving_average(x = sample(1:100, 10), x_order = 10:1)
-moving_average <- function(x, x_order, interval) {
+moving_average <- function(x, x_order, interval, na.rm = FALSE) {
     if (missing(interval)) {
         interval <- round(length(x) / 3, 0)
     }
