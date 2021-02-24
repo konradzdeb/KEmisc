@@ -2,18 +2,32 @@
 % Please edit documentation in R/view-glimpse.R
 \name{view_glimpse}
 \alias{view_glimpse}
-\title{Show d}
+\title{Provide glimpse-like results in View}
 \usage{
-view_glimpse(x)
+view_glimpse(x, n = 5)
 }
 \arguments{
 \item{x}{A data frame or a tibble}
+
+\item{n}{A number of observations to show}
+}
+\value{
+A data frame similar to \code{\link[tibble]{glimpse}}.
 }
 \description{
-Show d
+The function generates \code{\link[tibble]{glimpse}}-like
+  results that can be shown in \code{\link[utils]{View}}.
+}
+\details{
+The function will automatically attempt to open the results using
+  \code{\link[utils]{View}}. If this behaviour is not desired option
+  \code{show_view} should be set to \code{FALSE} as in
+  \code{show_view = FALSE}.
 }
 \examples{
 \dontrun{
+op <- options()
+options("open_view = FALSE")
 view_glimpse(mtcars)
 }
 }
