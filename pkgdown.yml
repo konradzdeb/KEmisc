@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1.9000
-pkgdown_sha: c931fe24c135c6ca704ae9f300470e9c66d8bfe7
+pkgdown: 1.6.1
+pkgdown_sha: ~
 articles: {}
-last_built: 2021-02-07T21:05Z
+last_built: 2021-03-08T19:39Z
 urls:
   reference: https://konradzdeb.github.io/KEmisc//reference
   article: https://konradzdeb.github.io/KEmisc//articles
