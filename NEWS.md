@@ -1,3 +1,7 @@
+# KEmisc 0.2.0
+
+* Added `save_all_objects` function to save all RDS files into a designated folder
+
 # KEmisc 0.1.1
 
 * Added `add_moving_average` 
